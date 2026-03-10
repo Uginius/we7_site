@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FamilyCore — Full Brand Kit</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Fraunces:opsz,wght@9..144,300;9..144,600&display=swap');
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--navy:#2C3E50;--red:#E74C3C;--gold:#F1C40F;--dk:#1a1a1a;--mid:#888;--bg:#f4f4f4}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--dk);padding:40px 16px}
+
+  .page{max-width:1100px;margin:0 auto}
+
+  .header{text-align:center;margin-bottom:60px}
+  .header h1{font-family:'Fraunces',serif;font-weight:300;font-size:2.4rem;margin-bottom:4px;color:var(--navy)}
+  .header p{color:var(--mid);font-size:0.88rem}
+
+  h2{font-family:'Fraunces',serif;font-weight:600;font-size:1.35rem;margin-bottom:6px;color:var(--dk)}
+  .desc{color:var(--mid);font-size:0.8rem;margin-bottom:20px;line-height:1.5}
+
+  .sect{margin-bottom:56px}
+
+  /* Cards */
+  .row{display:grid;gap:20px;margin-bottom:20px}
+  .r2{grid-template-columns:1fr 1fr}
+  .r3{grid-template-columns:1fr 1fr 1fr}
+  .r4{grid-template-columns:1fr 1fr 1fr 1fr}
+  @media(max-width:700px){.r2,.r3,.r4{grid-template-columns:1fr}}
+
+  .box{border-radius:16px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;min-height:180px}
+  .box.w{background:#fff;box-shadow:0 1px 12px rgba(0,0,0,0.06)}
+  .box.d{background:var(--dk)}
+  .box.n{background:var(--navy)}
+  .box.c{background:#FAF6F1;border:1px solid #e8e4de}
+  .box.r{background:var(--red)}
+  .box .tag{font-size:0.6rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--mid);margin-top:4px}
+  .d .tag,.n .tag,.r .tag{color:rgba(255,255,255,0.35)}
+
+  /* Logo mark inline helper */
+  .mark{display:inline-block}
+
+  /* Lockup: horizontal */
+  .lockup-h{display:flex;align-items:center;gap:14px}
+  .lockup-h .logo-text{font-family:'DM Sans',sans-serif;font-size:1.5rem;font-weight:500;white-space:nowrap}
+  .lockup-h .logo-text b{font-weight:800}
+  .lockup-h .logo-text.light{color:#fff}
+  .lockup-h .logo-text.dark{color:var(--dk)}
+  .lockup-h .logo-text.navy{color:var(--navy)}
+
+  /* Lockup: stacked */
+  .lockup-v{display:flex;flex-direction:column;align-items:center;gap:10px}
+  .lockup-v .logo-text{font-family:'DM Sans',sans-serif;font-size:1.3rem;font-weight:500;white-space:nowrap}
+  .lockup-v .logo-text b{font-weight:800}
+  .lockup-v .logo-text.light{color:#fff}
+  .lockup-v .logo-text.dark{color:var(--dk)}
+  .lockup-v .logo-text.navy{color:var(--navy)}
+
+  /* Lockup: stacked large */
+  .lockup-vl{display:flex;flex-direction:column;align-items:center;gap:16px}
+  .lockup-vl .logo-text{font-family:'DM Sans',sans-serif;font-size:1.6rem;font-weight:500;white-space:nowrap}
+  .lockup-vl .logo-text b{font-weight:800}
+
+  /* Palette */
+  .pal{display:flex;gap:16px;flex-wrap:wrap}
+  .sw{display:flex;align-items:center;gap:10px}
+  .sw-dot{width:52px;height:52px;border-radius:50%;box-shadow:0 2px 8px rgba(0,0,0,0.12)}
+  .sw-info{font-size:0.78rem;line-height:1.4}
+  .sw-info strong{display:block;font-size:0.88rem}
+
+  /* Size test */
+  .sizes{display:flex;gap:24px;align-items:flex-end;justify-content:center;padding:24px;border-radius:14px;flex-wrap:wrap;margin-bottom:12px}
+  .sizes.lt{background:#fff;box-shadow:0 1px 10px rgba(0,0,0,0.05)}
+  .sizes.dk{background:var(--dk)}
+  .si{display:flex;flex-direction:column;align-items:center;gap:5px}
+  .si .lb{font-size:0.55rem;text-transform:uppercase;letter-spacing:0.08em;color:var(--mid)}
+  .dk .lb{color:rgba(255,255,255,0.3)}
+
+  /* Clearspace diagram */
+  .clearspace-box{display:inline-flex;padding:24px;background:#fff;border-radius:14px;box-shadow:0 1px 10px rgba(0,0,0,0.05)}
+
+  /* Don'ts */
+  .donts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+  .dont{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 1px 8px rgba(0,0,0,0.05)}
+  .dont svg{margin-bottom:8px}
+  .dont p{font-size:0.72rem;color:var(--mid);line-height:1.4}
+  .dont .x{color:#E74C3C;font-weight:700;font-size:0.7rem;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="header">
+  <h1>FamilyCore Brand Kit</h1>
+  <p>Dark Navy · Red · Gold — Rising</p>
+</div>
+
+<!-- ======== 1. PALETTE ======== -->
+<div class="sect">
+  <h2>1. Палитра</h2>
+  <div class="desc">Три основных цвета. Navy — фундамент, Red — энергия, Gold — рост и свет.</div>
+  <div class="pal">
+    <div class="sw"><div class="sw-dot" style="background:#2C3E50"></div><div class="sw-info"><strong>Dark Navy</strong>#2C3E50 · RGB 44, 62, 80<br>Ядро, фундамент, доверие</div></div>
+    <div class="sw"><div class="sw-dot" style="background:#E74C3C"></div><div class="sw-info"><strong>Red</strong>#E74C3C · RGB 231, 76, 60<br>Партнёр, энергия, действие</div></div>
+    <div class="sw"><div class="sw-dot" style="background:#F1C40F"></div><div class="sw-info"><strong>Gold</strong>#F1C40F · RGB 241, 196, 15<br>Ребёнок, рост, свет</div></div>
+  </div>
+  <div style="margin-top:16px">
+    <div class="pal">
+      <div class="sw"><div class="sw-dot" style="background:#34495E"></div><div class="sw-info"><strong>Navy Light</strong>#34495E<br>Вариант navy для тёмных фонов</div></div>
+      <div class="sw"><div class="sw-dot" style="background:#ffffff;border:1px solid #ddd"></div><div class="sw-info"><strong>White</strong>#FFFFFF<br>Основной фон</div></div>
+      <div class="sw"><div class="sw-dot" style="background:#1a1a1a"></div><div class="sw-info"><strong>Near Black</strong>#1A1A1A<br>Тёмный фон</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 2. MARK ======== -->
+<div class="sect">
+  <h2>2. Знак (Mark)</h2>
+  <div class="desc">Основной знак — три круга по восходящей дуге.</div>
+  <div class="row r4">
+    <div class="box w">
+      <svg width="140" height="116" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <span class="tag">На белом</span>
+    </div>
+    <div class="box c">
+      <svg width="140" height="116" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <span class="tag">На кремовом</span>
+    </div>
+    <div class="box d">
+      <svg width="140" height="116" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <span class="tag">На тёмном</span>
+    </div>
+    <div class="box n">
+      <svg width="140" height="116" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#1A252F"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <span class="tag">На navy</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 3. HORIZONTAL LOCKUP ======== -->
+<div class="sect">
+  <h2>3. Горизонтальный логотип</h2>
+  <div class="desc">Знак слева, текст справа. Основной формат для навигации, хедеров, документов.</div>
+
+  <div class="row r2">
+    <div class="box w" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — на белом</span>
+    </div>
+    <div class="box d" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — на тёмном</span>
+    </div>
+  </div>
+  <div class="row r2">
+    <div class="box w" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — на белом</span>
+    </div>
+    <div class="box d" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — на тёмном</span>
+    </div>
+  </div>
+  <!-- Navy text variant -->
+  <div class="row r2">
+    <div class="box w" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text navy">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — navy text</span>
+    </div>
+    <div class="box w" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="52" height="43" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text navy">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — navy text</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 4. STACKED LOCKUP ======== -->
+<div class="sect">
+  <h2>4. Вертикальный логотип (знак сверху, текст снизу)</h2>
+  <div class="desc">Для квадратных форматов: сплэш-скрин, визитки, мерч, соцсети, презентации.</div>
+
+  <div class="row r3">
+    <div class="box w" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark" style="font-size:1.5rem">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — белый фон</span>
+    </div>
+    <div class="box d" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light" style="font-size:1.5rem">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — тёмный фон</span>
+    </div>
+    <div class="box n" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#1A252F"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light" style="font-size:1.5rem">Family<b>Core</b></span>
+      </div>
+      <span class="tag">EN — navy фон</span>
+    </div>
+  </div>
+
+  <div class="row r3">
+    <div class="box w" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark" style="font-size:1.5rem">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — белый фон</span>
+    </div>
+    <div class="box d" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light" style="font-size:1.5rem">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — тёмный фон</span>
+    </div>
+    <div class="box c" style="min-height:220px">
+      <div class="lockup-vl">
+        <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text navy" style="font-size:1.5rem">Семейное <b>ядро</b></span>
+      </div>
+      <span class="tag">RU — кремовый фон</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 5. COMPACT STACKED ======== -->
+<div class="sect">
+  <h2>5. Компактный вертикальный</h2>
+  <div class="desc">Маленький знак + текст. Для аватаров, стикеров, маленьких плашек.</div>
+
+  <div class="row r4">
+    <div class="box w" style="min-height:140px">
+      <div class="lockup-v">
+        <svg width="64" height="54" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark" style="font-size:1rem">Family<b>Core</b></span>
+      </div>
+    </div>
+    <div class="box d" style="min-height:140px">
+      <div class="lockup-v">
+        <svg width="64" height="54" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light" style="font-size:1rem">Family<b>Core</b></span>
+      </div>
+    </div>
+    <div class="box w" style="min-height:140px">
+      <div class="lockup-v">
+        <svg width="64" height="54" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text dark" style="font-size:1rem">Семейное <b>ядро</b></span>
+      </div>
+    </div>
+    <div class="box d" style="min-height:140px">
+      <div class="lockup-v">
+        <svg width="64" height="54" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+        <span class="logo-text light" style="font-size:1rem">Семейное <b>ядро</b></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 6. MONOCHROME ======== -->
+<div class="sect">
+  <h2>6. Монохромные версии</h2>
+  <div class="desc">Для печати, водяных знаков, гравировки, ч/б контекстов.</div>
+
+  <div class="row r4">
+    <div class="box w">
+      <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#2C3E50" opacity="0.55"/><circle cx="200" cy="72" r="28" fill="#2C3E50" opacity="0.25"/></svg>
+      <span class="tag">Mono Navy</span>
+    </div>
+    <div class="box d">
+      <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="white"/><circle cx="140" cy="92" r="50" fill="white" opacity="0.55"/><circle cx="200" cy="72" r="28" fill="white" opacity="0.25"/></svg>
+      <span class="tag">Mono White</span>
+    </div>
+    <div class="box w">
+      <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#1a1a1a"/><circle cx="140" cy="92" r="50" fill="#1a1a1a" opacity="0.5"/><circle cx="200" cy="72" r="28" fill="#1a1a1a" opacity="0.22"/></svg>
+      <span class="tag">Mono Black</span>
+    </div>
+    <div class="box w">
+      <svg width="120" height="100" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" stroke="#2C3E50" stroke-width="4" fill="none"/><circle cx="140" cy="92" r="50" stroke="#2C3E50" stroke-width="3" fill="none"/><circle cx="200" cy="72" r="28" stroke="#2C3E50" stroke-width="2.5" fill="none"/></svg>
+      <span class="tag">Outline</span>
+    </div>
+  </div>
+
+  <!-- Mono lockups -->
+  <div class="row r2" style="margin-top:16px">
+    <div class="box w" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="48" height="40" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#2C3E50" opacity="0.55"/><circle cx="200" cy="72" r="28" fill="#2C3E50" opacity="0.25"/></svg>
+        <span class="logo-text navy">Family<b>Core</b></span>
+      </div>
+      <span class="tag">Mono lockup</span>
+    </div>
+    <div class="box d" style="min-height:100px">
+      <div class="lockup-h">
+        <svg width="48" height="40" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="white"/><circle cx="140" cy="92" r="50" fill="white" opacity="0.55"/><circle cx="200" cy="72" r="28" fill="white" opacity="0.25"/></svg>
+        <span class="logo-text light">Family<b>Core</b></span>
+      </div>
+      <span class="tag">Mono lockup inverted</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 7. APP ICON / FAVICON ======== -->
+<div class="sect">
+  <h2>7. App Icon & Favicon</h2>
+
+  <div class="row r3">
+    <div class="box w">
+      <svg width="100" height="100" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="white" stroke="#eee" stroke-width="3"/><circle cx="172" cy="298" r="120" fill="#2C3E50"/><circle cx="292" cy="234" r="88" fill="#E74C3C"/><circle cx="396" cy="198" r="50" fill="#F1C40F"/></svg>
+      <span class="tag">App Icon — light</span>
+    </div>
+    <div class="box w">
+      <svg width="100" height="100" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#1a1a1a"/><circle cx="172" cy="298" r="120" fill="#34495E"/><circle cx="292" cy="234" r="88" fill="#E74C3C"/><circle cx="396" cy="198" r="50" fill="#F1C40F"/></svg>
+      <span class="tag">App Icon — dark</span>
+    </div>
+    <div class="box w">
+      <svg width="100" height="100" viewBox="0 0 512 512" fill="none"><rect width="512" height="512" rx="96" fill="#2C3E50"/><circle cx="172" cy="298" r="120" fill="#1A252F"/><circle cx="292" cy="234" r="88" fill="#E74C3C"/><circle cx="396" cy="198" r="50" fill="#F1C40F"/></svg>
+      <span class="tag">App Icon — navy</span>
+    </div>
+  </div>
+
+  <div class="sizes lt" style="margin-top:16px">
+    <div class="si"><svg width="64" height="64" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="19" r="10" fill="#2C3E50"/><circle cx="19" cy="14" r="7.5" fill="#E74C3C"/><circle cx="26" cy="10" r="4.5" fill="#F1C40F"/></svg><span class="lb">64px</span></div>
+    <div class="si"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="19" r="10" fill="#2C3E50"/><circle cx="19" cy="14" r="7.5" fill="#E74C3C"/><circle cx="26" cy="10" r="4.5" fill="#F1C40F"/></svg><span class="lb">32px</span></div>
+    <div class="si"><svg width="24" height="24" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="19" r="10" fill="#2C3E50"/><circle cx="19" cy="14" r="7.5" fill="#E74C3C"/><circle cx="26" cy="10" r="4.5" fill="#F1C40F"/></svg><span class="lb">24px</span></div>
+    <div class="si"><svg width="16" height="16" viewBox="0 0 32 32" fill="none"><circle cx="11" cy="19" r="10" fill="#2C3E50"/><circle cx="19" cy="14" r="7.5" fill="#E74C3C"/><circle cx="26" cy="10" r="4.5" fill="#F1C40F"/></svg><span class="lb">16px</span></div>
+  </div>
+</div>
+
+<!-- ======== 8. SIZE TEST ======== -->
+<div class="sect">
+  <h2>8. Размерный тест — горизонтальный логотип</h2>
+
+  <div class="sizes lt">
+    <div class="si" style="gap:8px">
+      <div class="lockup-h"><svg width="40" height="33" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text dark" style="font-size:1.3rem">Family<b>Core</b></span></div>
+      <span class="lb">Large</span>
+    </div>
+    <div class="si" style="gap:8px">
+      <div class="lockup-h" style="gap:10px"><svg width="28" height="23" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text dark" style="font-size:1rem">Family<b>Core</b></span></div>
+      <span class="lb">Medium</span>
+    </div>
+    <div class="si" style="gap:8px">
+      <div class="lockup-h" style="gap:8px"><svg width="20" height="16" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text dark" style="font-size:0.78rem">Family<b>Core</b></span></div>
+      <span class="lb">Small</span>
+    </div>
+  </div>
+  <div class="sizes dk">
+    <div class="si" style="gap:8px">
+      <div class="lockup-h"><svg width="40" height="33" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text light" style="font-size:1.3rem">Family<b>Core</b></span></div>
+      <span class="lb">Large</span>
+    </div>
+    <div class="si" style="gap:8px">
+      <div class="lockup-h" style="gap:10px"><svg width="28" height="23" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text light" style="font-size:1rem">Family<b>Core</b></span></div>
+      <span class="lb">Medium</span>
+    </div>
+    <div class="si" style="gap:8px">
+      <div class="lockup-h" style="gap:8px"><svg width="20" height="16" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#34495E"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg><span class="logo-text light" style="font-size:0.78rem">Family<b>Core</b></span></div>
+      <span class="lb">Small</span>
+    </div>
+  </div>
+</div>
+
+<!-- ======== 9. CLEARSPACE ======== -->
+<div class="sect">
+  <h2>9. Охранное поле</h2>
+  <div class="desc">Минимальный отступ от знака = диаметр маленького круга (Gold) со всех сторон.</div>
+  <div class="clearspace-box">
+    <svg width="320" height="240" viewBox="0 0 320 240" fill="none">
+      <!-- Clearspace border -->
+      <rect x="24" y="16" width="272" height="208" stroke="#ccc" stroke-width="1" stroke-dasharray="5 3" fill="none" rx="4"/>
+      <!-- Dimension arrows -->
+      <line x1="24" y1="10" x2="52" y2="10" stroke="#aaa" stroke-width="0.8"/><text x="38" y="8" text-anchor="middle" fill="#aaa" font-size="7" font-family="DM Sans">r</text>
+      <line x1="268" y1="10" x2="296" y2="10" stroke="#aaa" stroke-width="0.8"/>
+      <!-- Logo -->
+      <circle cx="100" cy="148" r="68" fill="#2C3E50"/>
+      <circle cx="168" cy="112" r="50" fill="#E74C3C"/>
+      <circle cx="228" cy="92" r="28" fill="#F1C40F"/>
+    </svg>
+  </div>
+</div>
+
+<!-- ======== 10. DON'TS ======== -->
+<div class="sect">
+  <h2>10. Как не надо</h2>
+  <div class="desc">Запрещённые модификации знака.</div>
+  <div class="donts">
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#E74C3C"/><circle cx="140" cy="92" r="50" fill="#2C3E50"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <div class="x">✕</div>
+      <p>Не менять порядок цветов</p>
+    </div>
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="72" r="68" fill="#2C3E50"/><circle cx="140" cy="108" r="50" fill="#E74C3C"/><circle cx="200" cy="128" r="28" fill="#F1C40F"/></svg>
+      <div class="x">✕</div>
+      <p>Не переворачивать (falling)</p>
+    </div>
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="100" r="68" fill="#2C3E50"/><circle cx="140" cy="100" r="50" fill="#E74C3C"/><circle cx="200" cy="100" r="28" fill="#F1C40F"/></svg>
+      <div class="x">✕</div>
+      <p>Не выстраивать в линию</p>
+    </div>
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none" style="opacity:0.4"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/></svg>
+      <div class="x">✕</div>
+      <p>Не уменьшать контраст / opacity</p>
+    </div>
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50" stroke="#F1C40F" stroke-width="3"/><circle cx="140" cy="92" r="50" fill="#E74C3C" stroke="#F1C40F" stroke-width="3"/><circle cx="200" cy="72" r="28" fill="#F1C40F" stroke="#E74C3C" stroke-width="3"/></svg>
+      <div class="x">✕</div>
+      <p>Не добавлять обводки</p>
+    </div>
+    <div class="dont">
+      <svg width="80" height="66" viewBox="0 0 240 200" fill="none"><circle cx="72" cy="128" r="68" fill="#2C3E50"/><circle cx="140" cy="92" r="50" fill="#E74C3C"/><circle cx="200" cy="72" r="28" fill="#F1C40F"/><circle cx="240" cy="60" r="16" fill="#00B894"/></svg>
+      <div class="x">✕</div>
+      <p>Не добавлять элементы</p>
+    </div>
+  </div>
+</div>
+
+</div><!-- /page -->
+</body>
+</html>
