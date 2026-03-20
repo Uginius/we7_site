@@ -62,13 +62,13 @@ button { cursor: pointer; border: none; font-family: inherit; }
 
 /* Logo */
 .logo {
-  display: flex; align-items: center; gap: 10px;
-  font-family: var(--font-body); font-size: 1.5rem; color: var(--navy);
+  display: flex; align-items: flex-end; gap: 10px;
+  font-family: var(--font-body); font-size: 1.35rem; color: var(--navy);
   white-space: nowrap; line-height: 1;
 }
 .logo svg { width: 30px; height: 30px; flex-shrink: 0; }
-.logo-text { font-weight: 400; letter-spacing: -0.01em; }
-.logo-text b { font-weight: 800; }
+.logo-text { font-weight: 400; letter-spacing: -0.01em; line-height: 0.85; }
+.logo-text b { font-weight: 800; color: var(--gold); font-size: 1.6rem; }
 
 /* Nav */
 .nav { display: flex; align-items: center; gap: 24px; }
