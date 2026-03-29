@@ -4,24 +4,54 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>We7 — Публичная оферта</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 <style>
-body{font-family:'DM Sans',system-ui,sans-serif;max-width:720px;margin:0 auto;padding:40px 20px 80px;color:#333;line-height:1.7;font-size:15px}
-h1{font-size:1.6rem;color:#2C3E50;margin-bottom:4px}
-h2{font-size:1.15rem;color:#2C3E50;margin-top:2em;border-bottom:1px solid #e9ecef;padding-bottom:8px}
-h3{font-size:0.95rem;color:#495057;margin-top:1.5em}
-p,li{color:#495057}
-a{color:#2C3E50}
-hr{border:none;border-top:1px solid #e9ecef;margin:2em 0}
-.back{display:inline-block;margin-bottom:24px;font-size:14px;color:#2C3E50;text-decoration:none}
-.back:hover{text-decoration:underline}
-.date{color:#868e96;font-size:14px;margin-bottom:24px}
-.requisites{margin-top:2em;padding:16px;background:#f8f9fb;border-radius:8px;font-size:14px;color:#495057}
+.legal{max-width:720px;margin:0 auto;padding:48px 20px 80px;font-family:'Nunito',system-ui,sans-serif;font-size:15px;line-height:1.7;color:#495057}
+.legal h1{font-family:'DM Serif Display',Georgia,serif;font-size:1.6rem;color:#2C3E50;margin-bottom:4px}
+.legal h2{font-size:1.15rem;color:#2C3E50;margin-top:2em;border-bottom:1px solid #e9ecef;padding-bottom:8px;font-family:'Nunito',sans-serif}
+.legal h3{font-size:0.95rem;color:#495057;margin-top:1.5em}
+.legal a{color:#2C3E50}
+.legal table{width:100%;border-collapse:collapse;margin:1em 0;font-size:14px}
+.legal th,.legal td{border:1px solid #dee2e6;padding:8px 12px;text-align:left}
+.legal th{background:#f8f9fb;font-weight:600;color:#2C3E50}
+.legal hr{border:none;border-top:1px solid #e9ecef;margin:2em 0}
+.legal .date{color:#868e96;font-size:14px;margin-bottom:24px}
+.legal .requisites{margin-top:2em;padding:16px;background:#f8f9fb;border-radius:8px;font-size:14px;color:#495057}
 </style>
 </head>
 <body>
 
-<a href="/" class="back">&larr; На главную</a>
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="19" r="10" fill="#2C3E50"/>
+        <circle cx="19" cy="14" r="7.5" fill="#E74C3C"/>
+        <circle cx="26" cy="10" r="4.5" fill="#F1C40F"/>
+      </svg>
+      <span class="logo-text">We<b>7</b></span>
+    </a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a href="/terms">Оферта</a>
+      <a href="/privacy">Конфиденциальность</a>
+      <a href="/consent">Согласие</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://web.we7.app/" class="btn-header">Войти</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav').classList.toggle('show')" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="legal">
 
 <h1>Публичная оферта</h1>
 <h2>на предоставление доступа к сервису We7</h2>
@@ -235,6 +265,44 @@ hr{border:none;border-top:1px solid #e9ecef;margin:2em 0}
 E-mail: <a href="mailto:support@we7.app">support@we7.app</a><br>
 Сайт: <a href="https://we7.app">https://we7.app</a>
 </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="19" r="10" fill="#34495E"/>
+          <circle cx="19" cy="14" r="7.5" fill="#E74C3C"/>
+          <circle cx="26" cy="10" r="4.5" fill="#F1C40F"/>
+        </svg>
+        <span class="logo-text">We<b>7</b></span>
+      </a>
+      <div class="footer-links">
+        <a href="https://web.we7.app/" class="footer-link">Приложение</a>
+        <a href="https://t.me/we7_bot" class="footer-link">Telegram</a>
+        <a href="https://vk.com/we7app" class="footer-link">ВКонтакте</a>
+        <a href="mailto:contact@we7.app" class="footer-link">Написать нам</a>
+      </div>
+    </div>
+    <div class="footer-legal" style="margin-top:16px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:13px">
+      <a href="/terms" style="color:rgba(255,255,255,0.5);text-decoration:none">Публичная оферта</a>
+      <a href="/privacy" style="color:rgba(255,255,255,0.5);text-decoration:none">Политика конфиденциальности</a>
+      <a href="/consent" style="color:rgba(255,255,255,0.5);text-decoration:none">Согласие на обработку данных</a>
+    </div>
+    <div class="footer-copy">
+      © 2025–2026 We7 · Меньше хаоса. Больше ясности. Больше жизни.
+      <br><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);letter-spacing:0.02em">ООО «Мы7» · ИНН 7804720410 · ОГРН 1267800024293</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); });
+</script>
 
 </body>
 </html>
