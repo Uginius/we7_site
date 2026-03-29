@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>We7 — Страница не найдена</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Nunito:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<style>
+.not-found{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;text-align:center;padding:40px 20px}
+.not-found .code{font-family:'DM Serif Display',Georgia,serif;font-size:6rem;color:#2C3E50;line-height:1;margin-bottom:8px}
+.not-found h1{font-family:'DM Serif Display',Georgia,serif;font-size:1.5rem;color:#2C3E50;margin-bottom:12px}
+.not-found p{font-family:'Nunito',sans-serif;color:#5A4E44;font-size:1rem;margin-bottom:32px;max-width:400px}
+.not-found .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+.not-found .actions a{font-family:'Nunito',sans-serif;font-weight:600;font-size:0.9rem;padding:12px 24px;border-radius:10px;text-decoration:none;transition:all 0.2s}
+.not-found .btn-home{background:#2C3E50;color:#fff}
+.not-found .btn-home:hover{background:#34495E}
+.not-found .btn-app{background:#FDEDEC;color:#E74C3C}
+.not-found .btn-app:hover{background:#fce0de}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="/" class="logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="11" cy="19" r="10" fill="#2C3E50"/>
+        <circle cx="19" cy="14" r="7.5" fill="#E74C3C"/>
+        <circle cx="26" cy="10" r="4.5" fill="#F1C40F"/>
+      </svg>
+      <span class="logo-text">We<b>7</b></span>
+    </a>
+    <nav class="nav">
+      <a href="/">Главная</a>
+      <a href="/terms">Оферта</a>
+      <a href="/privacy">Конфиденциальность</a>
+      <a href="/consent">Согласие</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://web.we7.app/" class="btn-header">Войти</a>
+    </div>
+    <button class="mobile-toggle" onclick="document.querySelector('.nav').classList.toggle('show')" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main class="not-found">
+  <div class="code">404</div>
+  <h1>Страница не найдена</h1>
+  <p>Такой страницы не существует. Возможно, она была перемещена или вы перешли по устаревшей ссылке.</p>
+  <div class="actions">
+    <a href="/" class="btn-home">На главную</a>
+    <a href="https://web.we7.app/" class="btn-app">Открыть приложение</a>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <a href="/" class="logo">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="11" cy="19" r="10" fill="#34495E"/>
+          <circle cx="19" cy="14" r="7.5" fill="#E74C3C"/>
+          <circle cx="26" cy="10" r="4.5" fill="#F1C40F"/>
+        </svg>
+        <span class="logo-text">We<b>7</b></span>
+      </a>
+      <div class="footer-links">
+        <a href="https://web.we7.app/" class="footer-link">Приложение</a>
+        <a href="https://t.me/we7_bot" class="footer-link">Telegram</a>
+        <a href="https://vk.com/we7app" class="footer-link">ВКонтакте</a>
+        <a href="mailto:contact@we7.app" class="footer-link">Написать нам</a>
+      </div>
+    </div>
+    <div class="footer-legal" style="margin-top:16px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap;font-size:13px">
+      <a href="/terms" style="color:rgba(255,255,255,0.5);text-decoration:none">Публичная оферта</a>
+      <a href="/privacy" style="color:rgba(255,255,255,0.5);text-decoration:none">Политика конфиденциальности</a>
+      <a href="/consent" style="color:rgba(255,255,255,0.5);text-decoration:none">Согласие на обработку данных</a>
+    </div>
+    <div class="footer-copy">
+      © 2025–2026 We7 · Меньше хаоса. Больше ясности. Больше жизни.
+      <br><span style="font-size:0.68rem;color:rgba(255,255,255,0.2);letter-spacing:0.02em">ООО «Мы7» · ИНН 7804720410 · ОГРН 1267800024293</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 20); });
+</script>
+
+</body>
+</html>
